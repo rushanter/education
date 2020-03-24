@@ -1,0 +1,12 @@
+com\hbu\test\controller\BaseController.class
+com\hbu\test\entity\User.class
+com\hbu\test\Application.class
+com\hbu\test\entity\Categories.class
+com\hbu\test\mapper\BannerMapper.class
+com\hbu\test\mapper\RecordMapper.class
+com\hbu\test\constants\ResultMsg.class
+com\hbu\test\constants\ResultErrorMsg.class
+com\hbu\test\entity\Record.class
+com\hbu\test\mapper\UserMapper.class
+com\hbu\test\entity\Banner.class
+com\hbu\test\mapper\CategoriesMapper.class
