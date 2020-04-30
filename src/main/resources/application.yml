@@ -4,13 +4,12 @@ server:
     context-path: /
 
 spring:
-
   profiles:
     active: local
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://39.97.106.238:3306/education?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://39.97.106.238:3306/education?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 12345678
 #  redis:
@@ -20,5 +19,10 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
-  type-aliases-package: com.hbu.test.entity
+  type-aliases-package: com.education.entity
   mapper-locations: classpath:mapper/*Mapper.xml
+wechat:
+  appid: wx5b224d37cfaa1970
+  secret: f943b6ea50453b7b66d9b9706a1cb48d
+  grant_type: authorization_code
+  loginUrl: https://api.weixin.qq.com/sns/jscode2session

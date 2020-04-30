@@ -5,7 +5,10 @@
     <select id="queryRecordList" resultType="record">
         select * from record
     </select>
-    <select id="queryRecordForType" parameterType="map" resultType="record">
+    <select id="queryForType" parameterType="map" resultType="record">
         select * from record where type = #{type} limit ${(page - 1) * 30} , 30
+    </select>
+    <select id="queryForRecommend" parameterType="map" resultType="record">
+        select * from record where type = #{recommend} limit ${(page - 1) * 30} , 30
     </select>
 </mapper>

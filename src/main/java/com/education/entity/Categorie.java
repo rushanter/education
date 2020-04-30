@@ -1,31 +1,25 @@
 package com.education.entity;
 
+import java.sql.Timestamp;
+
 /**
  * @author lss
  * @since 2020-03-22
  */
-public class Banner extends BaseEntity {
+public class Categorie extends BaseEntity {
 
-    private String bannerId;
-
-    private String image;
+    private String categorieId;
 
     private String title;
 
-    public String getBannerId() {
-        return bannerId;
+    private int type;
+
+    public String getCategorieId() {
+        return categorieId;
     }
 
-    public void setBannerId(String bannerId) {
-        this.bannerId = bannerId;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
+    public void setCategorieId(String categorieId) {
+        this.categorieId = categorieId;
     }
 
     public String getTitle() {
@@ -36,6 +30,14 @@ public class Banner extends BaseEntity {
         this.title = title;
     }
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -44,17 +46,17 @@ public class Banner extends BaseEntity {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Banner banner = (Banner) o;
-        return bannerId.equals(banner.bannerId);
+        Categorie categorie = (Categorie) o;
+        return categorieId.equals(categorie.categorieId);
     }
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Banner{");
+        final StringBuffer sb = new StringBuffer("Categorie{");
         sb.append("id='").append(super.getId()).append('\'');
-        sb.append(", bannerId='").append(bannerId).append('\'');
-        sb.append(", image='").append(image).append('\'');
-        sb.append(", title=='").append(title).append('\'');
+        sb.append(", categorieId='").append(categorieId).append('\'');
+        sb.append(", title='").append(title).append('\'');
+        sb.append(", type='").append(type).append('\'');
         sb.append(", createTime='").append(super.getCreateTime()).append('\'');
         sb.append(", updatedTime='").append(super.getUpdatedTime()).append('\'');
         sb.append('}');
@@ -63,6 +65,7 @@ public class Banner extends BaseEntity {
 
     @Override
     public int hashCode() {
-        return bannerId.hashCode();
+        return categorieId.hashCode();
     }
+
 }
